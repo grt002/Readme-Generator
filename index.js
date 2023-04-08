@@ -51,6 +51,10 @@ const questions = [
     },
 ];
 
+inquirer.prompt(questions).then(function (answers) {
+    console.log(answers);
+});
+
 // TODO: Create a function to write README file
 function writeToFile('README.md', generateMarkdown(answers)); {}
 
