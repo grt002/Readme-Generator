@@ -64,6 +64,8 @@ inquirer.prompt(questions).then(function (answers) {
             console.log("README.md file generated successfully!");
         });
     }
+
+    writeToFile('README.md', generateMarkdown(answers));
 });
 
 // TODO: Create a function to initialize app
