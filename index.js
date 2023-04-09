@@ -102,8 +102,10 @@ inquirer.prompt(questions).then(function (answers) {
     writeToFile('README.md', generateMarkdown(answers));
 });
 
-// TODO: Create a function to initialize app
-function init() {}
+// Function to initialize app
+function init() {
+    console.log('Application initialized.');
+}
 
 // Function call to initialize app
 init();
