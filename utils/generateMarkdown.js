@@ -57,12 +57,43 @@ This project is licensed under the [BSD 3-Clause License](https://opensource.org
   }
 }
 
-
-
-// TODO: Create a function to generate markdown for README
+// Function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `
+# ${data.title}
 
+## Description
+${data.description}
+
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [License](#license)
+* [Questions](#questions)
+
+## Installation
+${data.installation}
+
+## Usage
+${data.usage}
+
+## Contributing
+${data.contributing}
+
+## Tests
+${data.tests}
+
+## License
+${renderLicenseBadge(data.license)}
+
+This project is licensed under the ${data.license} license. ${renderLicenseLink(data.license)}
+
+${renderLicenseSection(data.license)}
+
+## Questions
+For any questions or feedback, please contact me at ${data.email} or visit my [GitHub profile](https://github.com/${data.username}).
 `;
 }
 
